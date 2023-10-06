@@ -28,4 +28,11 @@ function register_custom_post_types() {
 
 add_action('init', 'register_custom_post_types');
 
+add_action('wp_enqueue_scripts', 'mytheme_script_enqueue');
+function mytheme_theme_setup(){
+add_theme_support('menus');
+}
+
+add_action('init', 'mytheme_theme_setup');
+
 ?>
